@@ -1,7 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace Blog.Models
 {
+    [Table("Post")]
     public class Post
     {
+        [Key]
         public int Id { get; set; }
         public int CategoryId { get; set; }
         public int AuthorId { get; set; }
