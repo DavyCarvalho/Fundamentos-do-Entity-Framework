@@ -16,6 +16,7 @@ namespace Blog.Data
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Data Source=NT-03072\SQLEXPRESS;Initial Catalog=Blog;Integrated Security=True; TrustServerCertificate=True");
+            options.LogTo(Console.WriteLine); // Exibindo o Log de ações executadas pelo EF no console
         }
     }
 }
